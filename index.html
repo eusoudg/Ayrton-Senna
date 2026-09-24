@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayrton Senna — O Legado na Fórmula 1</title>
+    <!-- Google Fonts: Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0b0c10;
+            --card-bg: #14161f;
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --accent-yellow: #facc15;
+            --accent-green: #22c55e;
+            --border-color: rgba(255, 255, 255, 0.08);
+            --card-shadow: 0 16px 32px rgba(0, 0, 0, 0.6);
+        }
+
+        /* REQUISITO: Trocando a cor de fundo da página */
+        body {
+            background-color: var(--bg-color);
+            /* REQUISITO: Trocando a cor da fonte */
+            color: var(--text-primary);
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            margin: 0;
+            padding: 60px 20px;
+            line-height: 1.6;
+        }
+
+        .main-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .badge {
+            display: inline-block;
+            background-color: rgba(250, 204, 21, 0.1);
+            color: var(--accent-yellow);
+            border: 1px solid rgba(250, 204, 21, 0.3);
+            padding: 6px 16px;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            color: var(--text-primary);
+            font-size: 3.2rem;
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            margin-bottom: 15px;
+        }
+
+        h1 span {
+            color: var(--accent-yellow);
+        }
+
+        .subtitle {
+            color: var(--text-secondary);
+            font-size: 1.15rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* REQUISITO: Adicionando uma imagem e alterando atributos de estilo */
+        .hero-image-container {
+            width: 100%;
+            height: 420px;
+            border-radius: 20px;
+            overflow: hidden;
+            border: 2px solid var(--accent-yellow);
+            box-shadow: 0 12px 40px rgba(250, 204, 21, 0.15);
+            margin-bottom: 50px;
+            position: relative;
+        }
+
+        .hero-image-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(0.9);
+            transition: transform 0.5s ease;
+        }
+
+        .hero-image-container:hover img {
+            transform: scale(1.02);
+        }
+
+        .grid-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+            margin-bottom: 50px;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 16px;
+            padding: 30px;
+            border: 1px solid var(--border-color);
+            box-shadow: var(--card-shadow);
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-yellow);
+        }
+
+        .card h3 {
+            color: var(--accent-yellow);
+            font-size: 1.3rem;
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+
+        .card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+
+        .stats-section {
+            background: linear-gradient(135deg, #14161f, #1e2230);
+            border-radius: 20px;
+            padding: 40px;
+            border: 1px solid var(--border-color);
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 25px;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .stat-item h4 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--accent-yellow);
+            margin-bottom: 5px;
+        }
+
+        .stat-item p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .footer-action {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--accent-yellow);
+            color: #0b0c10;
+            padding: 14px 32px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 20px rgba(250, 204, 21, 0.4);
+        }
+
+        .btn:hover {
+            background-color: #fde047;
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.3rem;
+            }
+            .hero-image-container {
+                height: 260px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="main-container">
+
+        <!-- Cabeçalho -->
+        <header>
+            <span class="badge">Lenda da Fórmula 1</span>
+            <h1>Ayrton Senna <span>da Silva</span></h1>
+            <p class="subtitle">A velocidade, a genialidade extrema sob a chuva e a paixão que transformou o automobilismo em arte.</p>
+        </header>
+
+        <!-- REQUISITO: Imagem com atributos modificados (Borda, sombra, cantos arredondados) -->
+        <div class="hero-image-container">
+            <img src="https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?q=80&w=1200&auto=format&fit=crop" alt="Carro de Corrida na Pista">
+        </div>
+
+        <!-- Estatísticas Rápidas -->
+        <div class="stats-section">
+            <div class="stat-item">
+                <h4>3x</h4>
+                <p>Campeão Mundial</p>
+            </div>
+            <div class="stat-item">
+                <h4>41</h4>
+                <p>Vitórias</p>
+            </div>
+            <div class="stat-item">
+                <h4>65</h4>
+                <p>Pole Positions</p>
+            </div>
+            <div class="stat-item">
+                <h4>80</h4>
+                <p>Pódios</p>
+            </div>
+        </div>
+
+        <!-- Cards com Mais Informações -->
+        <div class="grid-cards">
+            
+            <div class="card">
+                <h3>O Rei da Chuva</h3>
+                <p>Senna possuía uma sensibilidade única em pistas molhadas. No GP de Mônaco de 1984 e em Donington Park em 1993, ele deu aulas magnificas de controle, ultrapassando rivais com facilidade impressionante na água.</p>
+            </div>
+
+            <div class="card">
+                <h3>A Busca Pela Perfeição</h3>
+                <p>Sua obsessão por detalhes técnicos e telemetria mudou para sempre a forma como os pilotos trabalham junto aos engenheiros, elevando o patamar de exigência física e mental na Fórmula 1.</p>
+            </div>
+
+            <div class="card">
+                <h3>Legado Eterno</h3>
+                <p>Muito além dos títulos com a McLaren, sua garra patriótica ao carregar a bandeira do Brasil e o Instituto Ayrton Senna — que educa milhões de crianças — mantêm seu espírito vivo até hoje.</p>
+            </div>
+
+        </div>
+
+        <!-- Botão de Acesso / Repositório -->
+        <div class="footer-action">
+            <a href="https://github.com" target="_blank" class="btn">Acessar Repositório no GitHub</a>
+        </div>
+
+    </div>
+
+</body>
+</html>
